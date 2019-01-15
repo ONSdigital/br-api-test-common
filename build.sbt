@@ -6,7 +6,15 @@ lazy val root = (project in file(".")).
     inThisBuild(List(
       organization := "uk.gov.ons",
       scalaVersion := "2.12.7",
-      version      := "0.1.0-SNAPSHOT"
+      licenses := Seq("MIT License" -> url("http://opensource.org/licenses/MIT")),
+      homepage := Some(url("https://github.com/ONSdigital/br-api-test-common")),
+      scmInfo := Some(ScmInfo(url("https://github.com/ONSdigital/br-api-test-common"), "scm:git:git@github.com:ONSDigital/br-api-test-common.git")),
+
+      // These are the sbt-release-early settings to configure
+      pgpPublicRing := file("/keys/.gnupg/local.pubring.asc"),
+      pgpSecretRing := file("/keys/.gnupg/local.secring.asc"),
+      releaseEarlyWith := BintrayPublisher,
+      releaseEarlyEnableSyncToMaven := false
     )),
     name := "br-api-test-common",
     scalacOptions ++= Seq(
