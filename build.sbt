@@ -6,7 +6,7 @@ lazy val root = (project in file(".")).
     inThisBuild(List(
       organization := "uk.gov.ons",
       scalaVersion := "2.12.7",
-      licenses := Seq("MIT License" -> url("http://opensource.org/licenses/MIT")),
+      licenses := Seq("MIT" -> url("http://opensource.org/licenses/MIT")),
       homepage := Some(url("https://github.com/ONSdigital/br-api-test-common")),
       scmInfo := Some(ScmInfo(url("https://github.com/ONSdigital/br-api-test-common"), "scm:git:git@github.com:ONSDigital/br-api-test-common.git")),
       developers := List(Developer("awharris", "Adrian Harris", "adrian.harris@ons.gov.uk", url("https://github.com/awharris")), Developer("nigelhp", "Nigel Perkins", "nigel.perkins@ext.ons.gov.uk", url("https://github.com/nigelhp"))),
