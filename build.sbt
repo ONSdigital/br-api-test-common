@@ -9,7 +9,7 @@ lazy val root = (project in file(".")).
       licenses := Seq("MIT License" -> url("http://opensource.org/licenses/MIT")),
       homepage := Some(url("https://github.com/ONSdigital/br-api-test-common")),
       scmInfo := Some(ScmInfo(url("https://github.com/ONSdigital/br-api-test-common"), "scm:git:git@github.com:ONSDigital/br-api-test-common.git")),
-
+      developers := List(Developer("awharris", "Adrian Harris", "adrian.harris@ons.gov.uk", url("https://github.com/awharris")), Developer("nigelhp", "Nigel Perkins", "nigel.perkins@ext.ons.gov.uk", url("https://github.com/nigelhp"))),
       // These are the sbt-release-early settings to configure
       pgpPublicRing := file("/keys/.gnupg/local.pubring.asc"),
       pgpSecretRing := file("/keys/.gnupg/local.secring.asc"),
@@ -35,10 +35,10 @@ lazy val root = (project in file(".")).
     conflictManager := ConflictManager.strict,
     libraryDependencies ++= Seq(
       compilerPlugin(silencerPlugin),
-      play, 
+      play,
       playTest,
       playWs,
-      scalaTest, 
+      scalaTest,
       scalaTestPlus,
       silencerLib % Provided,
       slf4jApi,
