@@ -14,7 +14,10 @@ lazy val root = (project in file(".")).
       pgpPublicRing := file("/keys/.gnupg/local.pubring.asc"),
       pgpSecretRing := file("/keys/.gnupg/local.secring.asc"),
       releaseEarlyWith := BintrayPublisher,
-      releaseEarlyEnableSyncToMaven := false
+      releaseEarlyEnableSyncToMaven := false,
+      bintrayOrganization := Some("ons"),
+      bintrayRepository := "ONS-Registers",
+      bintrayPackageLabels := Seq("scala", "ons", "sbt")
     )),
     name := "br-api-test-common",
     scalacOptions ++= Seq(
