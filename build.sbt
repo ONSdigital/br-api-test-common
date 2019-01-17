@@ -11,8 +11,8 @@ lazy val root = (project in file(".")).
       scmInfo := Some(ScmInfo(url("https://github.com/ONSdigital/br-api-test-common"), "scm:git:git@github.com:ONSDigital/br-api-test-common.git")),
       developers := List(Developer("awharris", "Adrian Harris", "adrian.harris@ons.gov.uk", url("https://github.com/awharris")), Developer("nigelhp", "Nigel Perkins", "nigel.perkins@ext.ons.gov.uk", url("https://github.com/nigelhp"))),
       // These are the sbt-release-early settings to configure
-      pgpPublicRing := file("/keys/.gnupg/local.pubring.asc"),
-      pgpSecretRing := file("/keys/.gnupg/local.secring.asc"),
+      pgpPublicRing := file("./travis/local.pubring.asc"),
+      pgpSecretRing := file("./travis/local.secring.asc"),
       releaseEarlyWith := BintrayPublisher,
       releaseEarlyEnableSyncToMaven := false,
       bintrayOrganization := Some("ons"),
