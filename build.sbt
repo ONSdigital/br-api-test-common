@@ -17,7 +17,8 @@ lazy val root = (project in file(".")).
       releaseEarlyEnableSyncToMaven := false,
       bintrayOrganization := Some("ons"),
       bintrayRepository := "ONS-Registers",
-      bintrayPackageLabels := Seq("scala", "ons", "sbt")
+      bintrayPackageLabels := Seq("scala", "sbt"),
+      resolvers += Resolver.bintrayRepo("ons", "ONS-Registers"),
     )),
     name := "br-api-test-common",
     scalacOptions ++= Seq(
