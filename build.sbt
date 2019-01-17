@@ -16,9 +16,6 @@ lazy val root = (project in file(".")).
       releaseEarlyWith := BintrayPublisher,
       releaseEarlyEnableSyncToMaven := false,
       bintrayOrganization := Some("ons"),
-      bintrayRepository := "ONS-Registers",
-      bintrayPackageLabels := Seq("scala", "sbt"),
-      resolvers += Resolver.bintrayRepo("ons", "ONS-Registers"),
     )),
     name := "br-api-test-common",
     scalacOptions ++= Seq(
@@ -67,3 +64,14 @@ lazy val root = (project in file(".")).
       sslConfigCore
     )
   )
+
+lazy val publishSettings = Seq(
+  resolvers += Resolver.jcenterRepo,
+  resolvers += Resolver.bintrayRepo("ons", "ONS-Registers"),
+  updateOptions := updateOptions.value.withCachedResolution(true),
+  // Bintray settings -- These ones have to be redefined in the projects
+  bintrayRepository := "ONS-Registers",
+  bintrayPackageLabels := Seq("scala", "sbt")
+)
+
+
