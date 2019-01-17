@@ -63,7 +63,7 @@ lazy val root = (project in file(".")).
       slf4jApi,
       sslConfigCore
     )
-  )
+  ).settings(publishSettings)
 
 lazy val publishSettings = Seq(
   resolvers += Resolver.jcenterRepo,
