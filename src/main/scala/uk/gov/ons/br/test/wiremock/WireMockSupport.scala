@@ -19,7 +19,7 @@ object WireMockSupport {
     finally wireMockSupport.wireMockServer.stop()
 
   def registerMapping(wireMockSupport: WireMockSupport)(mappingBuilder: MappingBuilder): WireMockSupport = {
-    wireMockSupport.wireMock.register(mappingBuilder)
+    wireMockSupport.wireMockServer.stubFor(mappingBuilder)
     wireMockSupport
   }
 

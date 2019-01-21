@@ -11,7 +11,7 @@ object Dependencies {
   lazy val silencerLib = "com.github.ghik" %% "silencer-lib" % silencerVersion
   lazy val silencerPlugin = "com.github.ghik" %% "silencer-plugin" % silencerVersion
   lazy val slf4jApi = "org.slf4j" % "slf4j-api" % "1.7.25"
-  lazy val wireMock = "com.github.tomakehurst" % "wiremock" % "2.19.0"
+  lazy val wireMock = "com.github.tomakehurst" % "wiremock" % "2.20.0"
 }
 
 /*
