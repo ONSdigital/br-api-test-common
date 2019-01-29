@@ -1,5 +1,6 @@
 package uk.gov.ons.br.test.json
 
+
 object JsonString {
   val EmptyValues = Seq.empty[Option[String]]
 

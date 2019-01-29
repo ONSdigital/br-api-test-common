@@ -1,7 +1,8 @@
 package uk.gov.ons.br.test.json
 
+
 import org.scalatest.{FreeSpec, Matchers}
-import play.api.libs.json.{JsNumber, JsObject, JsString, Json}
+import play.api.libs.json._
 import uk.gov.ons.br.test.json.JsonString._
 
 class JsonStringSpec extends FreeSpec with Matchers {
