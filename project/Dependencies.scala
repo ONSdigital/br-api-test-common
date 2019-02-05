@@ -11,6 +11,7 @@ object Dependencies {
   lazy val silencerLib = "com.github.ghik" %% "silencer-lib" % silencerVersion
   lazy val silencerPlugin = "com.github.ghik" %% "silencer-plugin" % silencerVersion
   lazy val slf4jApi = "org.slf4j" % "slf4j-api" % "1.7.25"
+  lazy val solrs = "io.ino" %% "solrs" % "2.2.0"
   lazy val wireMock = "com.github.tomakehurst" % "wiremock" % "2.20.0"
 }
 
@@ -23,9 +24,11 @@ object DependencyOverrides {
   lazy val findBugs = "com.google.code.findbugs" % "jsr305" % "3.0.2"
   lazy val guava = "com.google.guava" % "guava" % "22.0"
   lazy val jacksonDatabind = "com.fasterxml.jackson.core" % "jackson-databind" % "2.8.11.2"
+  lazy val jclOverSlf4j = "org.slf4j" % "jcl-over-slf4j" % "1.7.25"
   lazy val jodaTime = "joda-time" % "joda-time" % "2.9.9"
   lazy val playJson = "com.typesafe.play" %% "play-json" % "2.6.10"
   lazy val reactiveStreams = "org.reactivestreams" % "reactive-streams" % "1.0.2"
+  lazy val scalaJava8Compat = "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.0"
   lazy val scalaParserCombinators = "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.6"
   lazy val scalaXml = "org.scala-lang.modules" %% "scala-xml" % "1.0.6"
   lazy val sslConfigCore = "com.typesafe" %% "ssl-config-core" % "0.2.4"

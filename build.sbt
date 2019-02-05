@@ -43,6 +43,7 @@ lazy val root = (project in file(".")).
       scalaTestPlus,
       silencerLib % Provided,
       slf4jApi,
+      solrs,
       wireMock),
     dependencyOverrides ++= Seq(
       commonsLang,
@@ -50,6 +51,7 @@ lazy val root = (project in file(".")).
       guava,
       httpClient,
       jacksonDatabind,
+      jclOverSlf4j,
       jettyHttp,
       jettyIo,
       jettyUtil,
@@ -58,6 +60,7 @@ lazy val root = (project in file(".")).
       playTest,
       playWs,
       reactiveStreams,
+      scalaJava8Compat,
       scalaParserCombinators,
       scalaXml,
       slf4jApi,
